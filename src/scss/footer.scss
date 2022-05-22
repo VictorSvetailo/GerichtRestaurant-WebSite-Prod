@@ -1,0 +1,130 @@
+//====================================================================================================
+.overlap__footer {
+	.footer {
+		@include adaptiveValue("padding-top", 350, 40);
+		@include adaptiveValue("padding-bottom", 144, 40);
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.footer {
+	@include adaptiveValue("padding-top", 150, 40);
+	@include adaptiveValue("padding-bottom", 144, 40);
+	position: relative;
+	z-index: 2;
+	z-index: -var();
+	&__container {
+	}
+
+	&__body {
+		display: grid;
+		row-gap: 30px;
+		text-align: center;
+		@media (min-width: $tablet) {
+			align-items: flex-start;
+			grid-template-columns: 300px 1fr 300px;
+			justify-content: space-between;
+			column-gap: 20px;
+		}
+	}
+
+	&__contacts {
+		@media (max-width: $tablet) {
+			&:first-child {
+				order: 3;
+			}
+			&:last-child {
+				order: 2;
+			}
+		}
+		@media (min-width: $tablet) {
+			&:first-child {
+				justify-self: start;
+			}
+			&:last-child {
+				justify-self: end;
+			}
+		}
+	}
+
+	&__main {
+		text-align: center;
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
+
+	&__copy {
+		text-align: center;
+		@include adaptiveValue("padding-top", 80, 30);
+	}
+}
+.contacts-footer {
+	display: grid;
+	gap: 25px;
+	&__title {
+		color: #f5efdb;
+		@extend %cuf;
+		font-size: rem(32);
+		line-height: 130%;
+	}
+
+	&__items {
+		display: grid;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	&__link {
+	}
+	&__item {
+		display: grid;
+		justify-content: center;
+		gap: 10px;
+	}
+}
+.main-footer {
+	&__title {
+		text-transform: uppercase;
+		color: $mainGold;
+		@extend %cuf;
+		line-height: 130%;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		@include adaptiveValue("font-size", 64, 40);
+	}
+
+	&__text {
+		line-height: 175%;
+		text-align: center;
+		letter-spacing: 0.04em;
+		color: #ffffff;
+		display: inline-block;
+		max-width: rem(438);
+		margin: 0px 0px em(16, 14) 0px;
+		&::after {
+			margin: em(16, 14) 0px 0px 0px;
+			display: block;
+			@extend %ic;
+			content: "\e905";
+			font-size: rem(9);
+			color: $mainGold;
+		}
+	}
+
+	&__social {
+	}
+}
+.social-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: rem(18);
+	&__link {
+		font-size: rem(20);
+		color: #f5efdb;
+	}
+}
+
+//====================================================================================================

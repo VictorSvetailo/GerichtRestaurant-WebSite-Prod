@@ -1,0 +1,165 @@
+// глобальный фон
+[data-bg] {
+	overflow: hidden;
+	position: relative;
+}
+
+[data-bg2] {
+	overflow: hidden;
+	position: relative;
+}
+
+[data-decor] {
+	&::before {
+		content: "";
+		background: url("@img/main-decore.svg") 0 0 / 100% no-repeat;
+		width: rem(145);
+		height: rem(145);
+		animation: rotate 40s infinite linear;
+	}
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.bg-item {
+	content: "";
+	position: absolute;
+	top: -30%;
+	left: 0;
+	width: 100%;
+	height: 160%;
+	background: url("@img/mainBg.jpg") center / cover no-repeat;
+}
+
+.bg-item2 {
+	content: "";
+	position: absolute;
+	top: -30%;
+	left: 0;
+	width: 100%;
+	height: 110%;
+	background: url("@img/about/welcome/bg_hall.jpg") center / cover no-repeat;
+}
+
+// шапка блока
+.block-header {
+	@extend %cuf;
+	display: grid;
+	gap: 8px;
+	justify-items: center;
+	text-transform: capitalize;
+	&__sub-title {
+		color: $mainWhite;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 23, 23);
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		display: grid;
+		gap: 8px;
+		justify-items: center;
+		&::after {
+			@extend %ic;
+			content: "\e905";
+			color: $mainGold;
+			font-size: em(9, 23);
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 64, 35);
+		line-height: 130%;
+		letter-spacing: 0.03em;
+		color: $mainGold;
+	}
+	&_big {
+		.block-header__title {
+			@include adaptiveValue("font-size", 90, 40);
+		}
+	}
+
+	&_left {
+		justify-items: stretch;
+		.block-header__sub-title {
+			justify-items: stretch;
+		}
+	}
+}
+
+// кнопка скролла и вверх
+.scroll {
+	@extend %cuf;
+	color: $mainGold;
+	font-weight: 700;
+	line-height: 175%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	display: grid;
+	justify-items: center;
+	gap: 24px;
+	&::before {
+		content: "";
+		background: rgb(220, 202, 135);
+		width: 1px;
+		height: 60px;
+		background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
+	}
+}
+//========================================================================================================================================================
+
+.scroll-top {
+	background: transparent;
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+	position: fixed;
+	bottom: 20px;
+	right: -50px;
+	z-index: 1000;
+	font-size: 15px;
+	@extend %cuf;
+	color: $mainGold;
+	font-weight: 700;
+	line-height: 175%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	display: grid;
+	justify-items: center;
+	gap: 24px;
+	&::before {
+		content: "";
+		transition: all 0.8s ease 0s;
+		background: rgb(220, 202, 135);
+		width: 1px;
+		height: 50px;
+		background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
+	}
+}
+
+.scroll-top._active {
+	@media (min-width: $mobile) {
+		opacity: 1;
+		right: 50px;
+	}
+}
+
+.scroll-top:hover {
+	transform: scale(1.1);
+	&::before {
+		content: "";
+		background: rgb(220, 202, 135);
+		width: 1px;
+		height: 55px;
+		background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
+	}
+}
+//========================================================================================================================================================
+
+[class*="__text"] {
+	line-height: 175%;
+}
