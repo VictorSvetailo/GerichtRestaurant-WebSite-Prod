@@ -303,7 +303,6 @@
 		@extend %cuf;
 		content: "G ";
 		@include adaptiveValue("font-size", 600, 500);
-
 		font-weight: 700;
 		color: #272727;
 		position: absolute;
@@ -821,6 +820,129 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+	}
+}
+
+//* awards========================================================================================================================================================
+
+.awards {
+	@include adaptiveValue("padding-top", 128, 40);
+	@include adaptiveValue("padding-bottom", 128, 40);
+	// .awards__container
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 20px;
+	}
+
+	// .awards__block
+
+	&__block {
+		flex: 0 0 634px;
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+		}
+		&_none {
+			flex: 0 1 483px;
+			@media (max-width: $tablet) {
+				flex: 1 0 400px;
+			}
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+	}
+	.awards {
+		// .awards__header
+
+		&__header {
+			@media (max-width: $tablet) {
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	// .awards__elements
+
+	&__elements {
+		@include adaptiveValue("padding-top", 64, 20);
+		display: flex;
+		flex-wrap: wrap;
+		gap: 32px;
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+	}
+
+	// .awards__items
+
+	&__items {
+		flex: 0 1 300px;
+		display: flex;
+		gap: 32px;
+	}
+
+	// .awards__image
+
+	&__image {
+		position: relative;
+		&::after {
+			@extend %cuf;
+			content: "G ";
+			@include adaptiveValue("font-size", 500, 200);
+			font-weight: 700;
+			color: #fafafa;
+			opacity: 0.7;
+			position: absolute;
+			top: 77%;
+			// @include adaptiveValue("top", 71, 30);
+			left: 25%;
+			// @include adaptiveValue("left", 25, 30);
+			transform: translate(-50%, -50%);
+		}
+
+		flex: 0 1 483px;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.items-awards {
+}
+.item-awards {
+	// .item-awards__image
+
+	&__image {
+	}
+}
+.item-award {
+	// .item-award__info
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+.info-award {
+	// .info-award__title
+
+	&__title {
+		@extend %cuf;
+		font-weight: 700;
+		font-size: 23px;
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		color: #dcca87;
+	}
+
+	// .info-award__text
+
+	&__text {
 	}
 }
 
