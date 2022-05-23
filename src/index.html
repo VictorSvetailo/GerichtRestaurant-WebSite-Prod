@@ -275,11 +275,83 @@
 						</div>
 					</div>
 				</section>
+				<section class="testimony">
+					<div data-decor class="testimony__container">
+						<div class="block__testimony block-header">
+							<div class="block-header__sub-title">Testimony</div>
+							<h2 class="block-header__title">Happy customers</h2>
+						</div>
+						<div class="testimony_blocks block-testimony">
+							<div class="block-testimony__wrapp">
+								<div class="block-testimony__image">
+									<img src="@img/about/testimony/testimony01.jpg" alt="">
+								</div>
+								<div class="block-testimony__items item-testimony">
+									<p class="item-testimony__text">Vulputate nulla lobortis mauris eget sit. Nulla scelerisque
+										scelerisque
+										congue.</p>
+									<h4 class="item-testimony__title">Wade Warren</h4>
+									<p class="item-testimony__subtitle">Sommelier</p>
+								</div>
+							</div>
+							<div class="block-testimony__wrapp">
+								<div class="block-testimony__image">
+									<img src="@img/about/testimony/testimony02.jpg" alt="">
+								</div>
+								<div class="block-testimony__items item-testimony">
+									<p class="item-testimony__text">Lorem ipsum dolor sit amet, consectetur adipiscing sit.
+										auctor
+										sit iaculis in
+										arcu.</p>
+									<h4 class="item-testimony__title">Jane Cooper</h4>
+									<p class="item-testimony__subtitle">Chef</p>
+								</div>
+							</div>
+							<div class="block-testimony__wrapp">
+								<div class="block-testimony__image">
+									<img src="@img/about/testimony/testimony03.jpg" alt="">
+								</div>
+								<div class="block-testimony__items item-testimony">
+									<p class="item-testimony__text">Lorem ipsum dolor sit amet, consectetur adipiscing sit.
+										auctor
+										sit iaculis in Lorem, ipsum dolor sit amet voluptates eaque.</p>
+									<h4 class="item-testimony__title">Robert Fox</h4>
+									<p class="item-testimony__subtitle">Chef</p>
+								</div>
+							</div>
+							<div class="block-testimony__wrapp">
+								<div class="block-testimony__image">
+									<img src="@img/about/testimony/testimony04.jpg" alt="">
+								</div>
+								<div class="block-testimony__items item-testimony">
+									<p class="item-testimony__text">Lorem ipsum dolor sit amet, consectetur adipiscing sit.
+										auctor
+										sit iaculis in
+										arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.</p>
+									<h4 class="item-testimony__title">Brooklyn Simmons</h4>
+									<p class="item-testimony__subtitle">Caterer</p>
+								</div>
+							</div>
+							<div class="block-testimony__wrapp">
+								<div class="block-testimony__image">
+									<img src="@img/about/testimony/testimony04.jpg" alt="">
+								</div>
+								<div class="block-testimony__items item-testimony">
+									<p class="item-testimony__text">Lorem ipsum dolor sit amet, consectetur adipiscing sit.
+										auctor
+										sit iaculis in
+										arcu. Vulputate nulla lobortis mauris eget sit. Nulla scelerisque scelerisque congue.</p>
+									<h4 class="item-testimony__title">Brooklyn Simmons</h4>
+									<p class="item-testimony__subtitle">Caterer</p>
+								</div>
+							</div>
+						</div>
+				</section>
 				<div data-watch="video" class="video-module">
 					<video id="video-module" data-full="files/video2.mp4" data-src="files/video4.mp4" muted
 						class="video-module__item"></video>
 				</div>
-				<section class="gallery">
+				<section data-bg class="gallery">
 					<div class="gallery__container">
 						<div class="gallery__content">
 							<div class="gallery__header block-header block-header_left">
@@ -329,9 +401,26 @@
 						</div>
 					</div>
 				</section>
+				<section class="newsletter">
+					<div data-decor="" class="newsletter__container">
+						<div class="newsletter__wrapp">
+							<div class="block__newsletter block-header">
+								<div class="block-header__sub-title">Newsletter</div>
+								<h2 class="block-header__title">Subscribe to Our Newsletter</h2>
+								<p class="block-header__text">And never miss latest Updates!</p>
+							</div>
+							<form action="" class="newsletter__form">
+								<input type="email" class="newsletter__input" placeholder="Email Address" name="" id="">
+								<button type="submit" class="newsletter__button button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
-		@@include('html/_footer.htm',{})
+		<div class="overlap__footer">
+			@@include('html/_footer.htm',{})
+		</div>
 		<button data-goto=".wrapper" data-da=".wrapper,0,last" type="button"
 			class="scroll-top scroll _anim-items">Top</button>
 	</div>

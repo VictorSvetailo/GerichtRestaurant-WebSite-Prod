@@ -9,7 +9,7 @@
 		<div class="main-menu">
 			@@include('html/_header.htm',{})
 		</div>
-		<main class="mainpage">
+		<main class="barpage">
 			<section data-fullscreen class="mainpage__slider main-slider">
 				<div class="main-slider__container main-slider__container_wide">
 					<div class="main-slider__container body-main-slider">
@@ -17,13 +17,8 @@
 							<div class="body-main-slider__slide slide-main-slider">
 								<div class="slide-main-slider__content">
 									<div class="slide-main-slider__header block-header block-header_big block-header_left">
-										<div class="block-header__sub-title">Chase the new Flavour</div>
 										<h2 class="block-header__title">The key to Fine</h2>
 									</div>
-									<div class="slide-main-slider__text text">Sit tellus lobortis sed senectus vivamus molestie.
-										Condimentum volutpat morbi facilisis quam scelerisque sapien. Et,
-										penatibus aliquam amet tellus</div>
-									<a href="" class="slide-main-slider__button button">Explore Menu</a>
 								</div>
 								<a href=" " class="slide-main-slider__image-ibg">
 									<img class="swiper-lazy" data-src="@img/mainpage/mainsliedr/01.jpg" alt="Image food">
@@ -32,13 +27,8 @@
 							<div class="body-main-slider__slide slide-main-slider">
 								<div class="slide-main-slider__content">
 									<div class="slide-main-slider__header block-header block-header_big block-header_left">
-										<div class="block-header__sub-title">Chase the new Flavour</div>
 										<h2 class="block-header__title">Lorem ipsum </h2>
 									</div>
-									<div class="slide-main-slider__text text">Sit tellus lobortis sed senectus vivamus molestie.
-										Condimentum volutpat morbi facilisis quam scelerisque sapien. Et,
-										penatibus aliquam amet tellus</div>
-									<a href="" class="slide-main-slider__button button">Explore Menu</a>
 								</div>
 								<a href=" " class="slide-main-slider__image-ibg">
 									<img class="swiper-lazy" data-src="@img/mainpage/mainsliedr/02.jpg" alt="Image food">
@@ -47,13 +37,8 @@
 							<div class="body-main-slider__slide slide-main-slider">
 								<div class="slide-main-slider__content">
 									<div class="slide-main-slider__header block-header block-header_big block-header_left">
-										<div class="block-header__sub-title">Chase the new Flavour</div>
 										<h2 class="block-header__title">Et, penatibus</h2>
 									</div>
-									<div class="slide-main-slider__text text">Sit tellus lobortis sed senectus vivamus molestie.
-										Condimentum volutpat morbi facilisis quam scelerisque sapien. Et,
-										penatibus aliquam amet tellus</div>
-									<a href="" class="slide-main-slider__button button">Explore Menu</a>
 								</div>
 								<a href=" " class="slide-main-slider__image-ibg">
 									<img class="swiper-lazy" data-src="@img/mainpage/mainsliedr/03.jpg" alt="Image food">
@@ -71,27 +56,6 @@
 				</div>
 			</section>
 			<div class="mainpage__body">
-				<section id=".about-section" data-bg class="mainpage__about about-section">
-					<div class="about-section__container">
-						<div class="about-section__content">
-							<h3 class="about-section__title">About Us</h3>
-							<div class="about-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-								pharetra adipiscing ultrices vulputate posuere tristique.
-								In sed odio nec aliquet eu proin mauris et.</div>
-							<a href="" class="about-section__button button">Know More</a>
-						</div>
-						<div class="about-section__knife">
-							<img src="@img/mainpage/about/knives.png" alt="">
-						</div>
-						<div class="about-section__content">
-							<h3 class="about-section__title">Our History</h3>
-							<div class="about-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-								pharetra adipiscing ultrices vulputate posuere tristique.
-								In sed odio nec aliquet eu proin mauris et.</div>
-							<a href="" class="about-section__button button">Know More</a>
-						</div>
-					</div>
-				</section>
 				<section class="book">
 					<div data-decor class="book__container">
 						<div class="book__body">
@@ -135,20 +99,6 @@
 								<button type="submit" class="book__button button">Book Now</button>
 							</form>
 						</div>
-					</div>
-				</section>
-				<section class="menu-block">
-					<div data-decor class="menu-block__container menu-block__container_wide">
-						<nav class="menu-block__menu">
-							<ul class="menu-block__list">
-								<li class="menu-block__item"><a href="" class="menu-block__link">Bar Menu</a></li>
-								<li class="menu-block__item"><a href="" class="menu-block__link">Food Menu</a></li>
-								<li class="menu-block__item"><a href="" class="menu-block__link">Desserts Menu</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="menu-block__bg">
-						<img src="@img/mainpage/menu-block/bg.jpg" alt="">
 					</div>
 				</section>
 				<section class="special">
@@ -275,63 +225,26 @@
 						</div>
 					</div>
 				</section>
-				<div data-watch="video" class="video-module">
-					<video id="video-module" data-full="files/video2.mp4" data-src="files/video4.mp4" muted
-						class="video-module__item"></video>
-				</div>
-				<section class="gallery">
-					<div class="gallery__container">
-						<div class="gallery__content">
-							<div class="gallery__header block-header block-header_left">
-								<div class="block-header__sub-title">Instagram</div>
-								<h2 class="block-header__title">Photo Gallery</h2>
+				<section class="newsletter">
+					<div data-decor="" class="newsletter__container">
+						<div class="newsletter__wrapp">
+							<div class="block__newsletter block-header">
+								<div class="block-header__sub-title">Newsletter</div>
+								<h2 class="block-header__title">Subscribe to Our Newsletter</h2>
+								<p class="block-header__text">And never miss latest Updates!</p>
 							</div>
-							<div class="gallery__text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit
-								scelerisque egestas mu.</div>
-							<a href="" class="gallery__button button">View More</a>
-						</div>
-						<div class="gallery__body">
-							<div class="gallery__slider">
-								<div data-gallery class="gallery__swiper">
-									<a href="@img/mainpage/gallery/food1.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food1.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food2.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food2.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food3.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food3.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food4.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food4.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food5.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food5.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food1.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food1.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food2.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food2.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food3.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food3.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food4.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food4.jpg" alt="image">
-									</a>
-									<a href="@img/mainpage/gallery/food5.jpg" class="gallery__slide-ibg">
-										<img class="swiper-lazy" data-src="@img/mainpage/gallery/food5.jpg" alt="image">
-									</a>
-								</div>
-							</div>
+							<form action="" class="newsletter__form">
+								<input type="email" class="newsletter__input" placeholder="Email Address" name="" id="">
+								<button type="submit" class="newsletter__button button">Subscribe</button>
+							</form>
 						</div>
 					</div>
 				</section>
 			</div>
 		</main>
-		@@include('html/_footer.htm',{})
+		<div class="overlap__footer">
+			@@include('html/_footer.htm',{})
+		</div>
 		<button data-goto=".wrapper" data-da=".wrapper,0,last" type="button"
 			class="scroll-top scroll _anim-items">Top</button>
 	</div>
