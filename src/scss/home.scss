@@ -946,6 +946,124 @@
 	}
 }
 
+//* blogs========================================================================================================================================================
+
+.blogs {
+	@include adaptiveValue("padding-top", 150, 40);
+	@include adaptiveValue("padding-bottom", 160, 40);
+
+	// .blogs__container
+
+	&__container {
+		display: grid;
+	}
+
+	// .blogs__header
+
+	&__header {
+	}
+
+	// .blogs__items
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 32px;
+		@include adaptiveValue("padding-top", 65, 20);
+		@include adaptiveValue("padding-bottom", 65, 20);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("row-gap", 100, 30);
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("row-gap", 100, 30);
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .blogs__item
+
+	&__item {
+		flex: 0 1 412px;
+	}
+	&__item:last-child {
+		// align-self: flex-start;
+		align-content: flex-start;
+	}
+
+	&__button {
+		justify-self: center;
+	}
+}
+
+.item-blogs {
+	// .item-blogs__block
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	&__block {
+		gap: 32px;
+	}
+
+	// .item-blogs__info
+
+	&__info {
+	}
+}
+.block-blogs-part {
+	// .block-blogs-part__image
+
+	&__image {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .block-blogs-part__update
+
+	&__update {
+		display: flex;
+		justify-content: space-between;
+		line-height: 175%;
+		letter-spacing: 0.04em;
+		color: #fafafa;
+	}
+
+	// .block-blogs-part__date
+
+	&__date {
+	}
+
+	// .block-blogs-part__name
+
+	&__name {
+	}
+}
+.description-blogs {
+	// .description-blogs__title
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+	&__title {
+		font-size: 32px;
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		text-decoration-line: underline;
+		color: #dcca87;
+	}
+
+	// .description-blogs__text
+
+	&__text {
+	}
+
+	// .description-blogs__more
+
+	&__more {
+	}
+}
+
 //========================================================================================================================================================
 
 .gallery {
