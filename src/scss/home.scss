@@ -1219,18 +1219,53 @@
 }
 
 .about-us-menu {
-
+}
+.main-about-us__body {
 }
 
 //========================================================================================================================================================
 
 .welcome {
-	@include adaptiveValue("margin-top", 121, 50);
+	// @include adaptiveValue("margin-top", 121, 50);
 	position: relative;
 	// @include adaptiveValue("margin-top", 130, 80);
-	padding: 255px 0px 255px 0px;
-	z-index: -1;
+	// padding: 200px 0px 200px 0px;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__images {
+		position: absolute;
+		width: 120%;
+		height: 120%;
+		left: -10%;
+		top: -10%;
+	}
 }
+
+.images-welcome {
+	// .images-welcome__item
+
+	&__item {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	// .images-welcome__background
+
+	&__background {
+		background: url("@img/about/welcome/bg_hall.jpg") top / cover no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+}
+
 .book {
 	&__welcome {
 	}

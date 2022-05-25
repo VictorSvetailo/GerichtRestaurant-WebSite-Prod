@@ -4,10 +4,10 @@
 	position: relative;
 }
 
-[data-bg2] {
-	overflow: hidden;
-	position: relative;
-}
+// [data-bg2] {
+// 	overflow: hidden;
+// 	position: relative;
+// }
 
 [data-decor] {
 	&::before {
@@ -37,15 +37,15 @@
 	background: url("@img/mainBg.jpg") center / cover no-repeat;
 }
 
-.bg-item2 {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url("@img/about/welcome/bg_hall.jpg") center / cover no-repeat;
-}
+// .bg-item2 {
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: url("@img/about/welcome/bg_hall.jpg") center / cover no-repeat;
+// }
 
 // шапка блока
 .block-header {

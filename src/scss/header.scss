@@ -8,6 +8,7 @@
 	top: 0;
 	left: 0;
 	z-index: 50;
+	background-color: $mainDark;
 	&._header-scroll {
 		position: fixed;
 		top: -200%;
@@ -18,6 +19,7 @@
 	&._header-show {
 		top: 0;
 		transition: transform 0.3s ease 0s;
+		transition: all 1s ease 0s;
 		// transform: translate(0px, 0%);
 	}
 	&__container {
@@ -33,7 +35,7 @@
 		@media (max-width: $mobile) {
 			gap: 30px;
 		}
-		._header-scroll &{
+		._header-scroll & {
 			@include adaptiveValue("min-height", 80, 50);
 		}
 	}
