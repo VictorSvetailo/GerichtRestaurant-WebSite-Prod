@@ -171,7 +171,7 @@ window.onload = function () {
 			positionY = positionY + (distY * speed);
 
 			// Передаем стили
-			images.style.cssText = `transform: translate(${positionX / forImages}%,${positionY / forImages}%);`
+			images.style.cssText = `transform: translate(${positionX / forImages}%,${positionY / forImages}%);`;
 			requestAnimationFrame(setMouseParallaxStyle);
 		}
 		setMouseParallaxStyle();
@@ -207,8 +207,8 @@ window.onload = function () {
 		observer.observe(document.querySelector('.history'));
 
 		function setParallaxItemsStyle(scrollTopProcent) {
-			content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 1}%);`;
-			images.parentElement.style.cssText = `transform: translate(0%,-${scrollTopPercent / 1}%);`;
+			content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 5}%);`;
+			images.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 13}%);`;
 		}
 	}
 }

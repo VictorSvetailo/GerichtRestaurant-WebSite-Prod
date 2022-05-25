@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+// window['FLS'] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -152,7 +152,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация по работе в шаблоне: js/libs/watcher.js
 // Сниппет(HTML):
-flsScroll.scrollWatcher(false);
+// flsScroll.scrollWatcher(false);
 
 // Плавная навигация по странице
 flsScroll.pageNavigation();

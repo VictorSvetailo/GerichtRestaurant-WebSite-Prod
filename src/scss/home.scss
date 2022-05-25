@@ -74,6 +74,7 @@
 	}
 
 	&__menu {
+		z-index: 10;
 	}
 
 	&__link {
@@ -1002,9 +1003,6 @@
 	flex-direction: column;
 	gap: 32px;
 	@media (max-width: $mobile) {
-		flex-direction: row;
-	}
-	@media (max-width: 600px) {
 		flex-direction: column;
 	}
 
@@ -1013,9 +1011,6 @@
 		@media (max-width: $mobile) {
 			flex: 1 1 33.333%;
 		}
-		@media (max-width: 600px) {
-			flex: 1 1 100%;
-		}
 	}
 
 	// .item-blogs__info
@@ -1023,9 +1018,6 @@
 	&__info {
 		@media (max-width: $mobile) {
 			flex: 1 1 33.333%;
-		}
-		@media (max-width: 600px) {
-			flex: 1 1 100%;
 		}
 	}
 }
@@ -1215,7 +1207,7 @@
 //========================================================================================================================================================
 //! About Us ========================================================================================================================================================
 .about-us-menu .menu__link_about-us-active {
-	// color: $mainGold;
+	color: $mainGold;
 }
 
 .about-us-menu {
@@ -1226,10 +1218,9 @@
 //========================================================================================================================================================
 
 .welcome {
-	// @include adaptiveValue("margin-top", 121, 50);
 	position: relative;
-	// @include adaptiveValue("margin-top", 130, 80);
-	// padding: 200px 0px 200px 0px;
+	padding: 100px 0px 100px 0px;
+	height: 100vh;
 	z-index: 10;
 	display: flex;
 	align-items: center;
@@ -1257,7 +1248,7 @@
 	// .images-welcome__background
 
 	&__background {
-		background: url("@img/about/welcome/bg_hall.jpg") top / cover no-repeat;
+		background: url("@img/about/welcome/bg_hall.jpg") center / cover no-repeat;
 		position: absolute;
 		width: 100%;
 		height: 100%;
