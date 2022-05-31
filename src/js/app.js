@@ -162,6 +162,7 @@ flsScroll.headerScroll();
 
 flsScroll.bgParallax();
 
+
 // Функционал липкого блока
 // flsScroll.stickyBlock();
 

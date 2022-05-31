@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+	position: absolute;
 	color: #fff;
 	padding: 10px 0px;
 	position: absolute;
@@ -27,11 +28,15 @@
 		}
 		position: relative;
 		align-items: center;
-		min-height: 121px;
+		min-height: 115px;
 		display: flex;
 		gap: 10px;
-		// динамическая адаптация
-		@include adaptiveValue("min-height", 100, 50);
+		@media (max-width: $tablet) {
+			min-height: 90px;
+		}
+		@media (max-width: $mobile) {
+			min-height: 50px;
+		}
 		@media (max-width: $mobile) {
 			gap: 30px;
 		}

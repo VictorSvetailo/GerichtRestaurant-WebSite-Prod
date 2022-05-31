@@ -116,6 +116,68 @@ function initSliders() {
 			}
 		});
 	}
+	if (document.querySelector('.body-barpage-slider')) {
+		new Swiper('.body-barpage-slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Pagination, EffectFade, Lazy, Autoplay],
+			effect: 'fade',
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			autoHeight: false,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+			},
+			// Dotts
+			pagination: {
+				el: '.body-barpage-slider__controll',
+				clickable: true,
+			},
+			// Arrows
+			/*
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
+			*/
+			breakpoints: {
+				320: {
+					autoHeight: true,
+				},
+				992: {
+					autoHeight: false,
+				}
+			},
+			on: {
+				init: function () {
+					const controll = document.querySelectorAll('.body-barpage-slider__controll .swiper-pagination-bullet');
+					controll.forEach((el, index) => {
+						let num;
+						if (index < 10) {
+							num = `0`;
+						}
+						el.innerHTML = `${num}${index + 1}`;
+					});
+				},
+				// фиксим баг с адаптивом на лету  
+				breakpoint: function (swiper, info) {
+					!info.autoHeight ? document.querySelector('.body-barpage-slider__swiper').style.height = 'auto' : '';
+					swiper.updateSize();
+				},
+			}
+		});
+	}
 	if (document.querySelector('.gallery__slider')) {
 		new Swiper('.gallery__slider', {
 			// Подключаем модули слайдера

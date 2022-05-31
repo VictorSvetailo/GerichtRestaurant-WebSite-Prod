@@ -157,12 +157,20 @@ export function stickyBlock() {
 	stickyBlockInit();
 }
 
+
+
 export function bgParallax() {
 	addWindowScrollEvent = true;
+	// console.log(bgItems);
+	// собрали объекты data-bg
 	const bgItems = document.querySelectorAll('[data-bg], [data-bg2]');
+	console.log(bgItems);
+	// проверяем наличие объектов
 	if (bgItems.length) {
+		// вешаем прослушиватель которые реагирует на скролл. Он слушает скролл через прокладку 
 		document.addEventListener("windowScroll", function (e) {
 			bgItems.forEach(bgItem => {
+				// отслеживать появления объекта и когда мы его пролистываем перестать за ним смотреть 
 				// let size = bgItem.dataset.bg ? Number(bgItem.dataset.bg) : 30;
 				let bgItemPosition = bgItem.getBoundingClientRect().top + scrollY;
 				let bgItemHeight = bgItem.offsetHeight;
@@ -178,6 +186,8 @@ export function bgParallax() {
 		});
 	}
 }
+
+
 
 
 // При подключении модуля обработчик события запустится автоматически

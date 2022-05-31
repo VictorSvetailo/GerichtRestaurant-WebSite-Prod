@@ -4,10 +4,10 @@
 	position: relative;
 }
 
-// [data-bg2] {
-// 	overflow: hidden;
-// 	position: relative;
-// }
+[data-bg2] {
+	overflow: hidden;
+	position: relative;
+}
 
 [data-decor] {
 	&::before {
@@ -30,22 +30,22 @@
 .bg-item {
 	content: "";
 	position: absolute;
-	top: -30%;
+	top: -20%;
 	left: 0;
 	width: 100%;
-	height: 160%;
+	height: 140%;
 	background: url("@img/mainBg.jpg") center / cover no-repeat;
 }
 
-// .bg-item2 {
-// 	content: "";
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: url("@img/about/welcome/bg_hall.jpg") center / cover no-repeat;
-// }
+.bg-item2 {
+	content: "";
+	position: absolute;
+	top: -20%;
+	left: 0;
+	width: 100%;
+	height: 140%;
+	background: url("@img/mainbar/hours/hoursBg01.jpg") center / cover no-repeat;
+}
 
 // шапка блока
 .block-header {
@@ -81,6 +81,19 @@
 	&_big {
 		.block-header__title {
 			@include adaptiveValue("font-size", 90, 40);
+		}
+	}
+	&_barpage {
+		display: flex;
+		justify-content: center;
+		.block-header__title {
+			@include adaptiveValue("font-size", 181, 50);
+			width: 100%;
+			font-weight: 700;
+			line-height: 130%;
+			letter-spacing: 0.05em;
+			text-transform: capitalize;
+			color: #ffffff;
 		}
 	}
 

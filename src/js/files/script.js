@@ -143,14 +143,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	// }
 });
 
-// ========================================================================================================================================================
+//* scroll header ========================================================================================================================================================
 
 window.onload = function () {
-	const parallax = document.querySelector('.welcome');
+	const parallax = document.querySelector('.welcome, .barpage-slider');
 
 	if (parallax) {
-		const content = document.querySelector('.welcome__container');
-		const images = document.querySelector('.images-welcome__background');
+		const content = document.querySelector('.welcome__container, .barpage__images');
+		const images = document.querySelector('.images-welcome__background, .images-barpage__background');
 
 		// Коэффициенты
 		const forImages = 40;
@@ -174,7 +174,7 @@ window.onload = function () {
 			images.style.cssText = `transform: translate(${positionX / forImages}%,${positionY / forImages}%);`;
 			requestAnimationFrame(setMouseParallaxStyle);
 		}
-		setMouseParallaxStyle();
+		// setMouseParallaxStyle();
 
 		parallax.addEventListener("mousemove", function (e) {
 			// Получение ширины и высоты блока
@@ -193,7 +193,7 @@ window.onload = function () {
 		// Parallax при скролле
 
 		let thresholdSets = [];
-		for (let i = 0; i <= 1.0; i += 0.005) {
+		for (let i = 0; i <= 1.0; i += 0.0009) {
 			thresholdSets.push(i);
 		}
 		const callback = function (entries, observer) {
@@ -204,11 +204,12 @@ window.onload = function () {
 			threshold: thresholdSets
 		});
 
-		observer.observe(document.querySelector('.history'));
+		observer.observe(document.querySelector('.history, .mainpage__body'));
 
 		function setParallaxItemsStyle(scrollTopProcent) {
-			content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 5}%);`;
-			images.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 13}%);`;
+			content.style.cssText = `transform: translate(0%,${scrollTopProcent / 0}%);`;
+			images.parentElement.style.cssText = `transform: translate(0%,${scrollTopProcent / 5}%);`;
 		}
 	}
-}
+};
+

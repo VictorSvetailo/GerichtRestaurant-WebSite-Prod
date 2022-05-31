@@ -10,49 +10,57 @@
 			@@include('html/_header.htm',{})
 		</div>
 		<main class="barpage">
-			<section data-fullscreen class="mainpage__slider main-slider">
-				<div class="main-slider__container main-slider__container_wide">
-					<div class="main-slider__container body-main-slider">
-						<div class="body-main-slider__swiper">
-							<div class="body-main-slider__slide slide-main-slider">
-								<div class="slide-main-slider__content">
-									<div class="slide-main-slider__header block-header block-header_big block-header_left">
+			<section data-fullscreen class="barpage__slider barpage-slider">
+				<div class="barpage-slider__container barpage-slider__container_wide">
+					<div class="barpage-slider__container body-barpage-slider">
+						<div class="body-barpage-slider__swiper">
+							<div class="body-barpage-slider__slide slide-barpage-slider">
+								<div class="slide-barpage-slider__content">
+									<div
+										class="slide-barpage-slider__header block-header block-header_big block-header_barpage block-header_center">
 										<h2 class="block-header__title">The key to Fine</h2>
 									</div>
 								</div>
-								<a href=" " class="slide-main-slider__image-ibg">
-									<img class="swiper-lazy" data-src="@img/about/testimony/testimony01.jpg" alt="Image food">
+								<a href="" class="slide-barpage-slider__image-ibg">
+									<img class="swiper-lazy" data-src="@img/mainbar/barheader/daybar.jpg" alt="Image food">
 								</a>
 							</div>
-							<div class="body-main-slider__slide slide-main-slider">
-								<div class="slide-main-slider__content">
-									<div class="slide-main-slider__header block-header block-header_big block-header_left">
-										<h2 class="block-header__title">Lorem ipsum </h2>
+							<div class="body-barpage-slider__slide slide-barpage-slider">
+								<div class="slide-barpage-slider__content">
+									<div
+										class="slide-barpage-slider__header block-header block-header_big block-header_barpage block-header_center">
+										<h2 class="block-header__title">On the Rocks</h2>
 									</div>
 								</div>
-								<a href=" " class="slide-main-slider__image-ibg">
-									<img class="swiper-lazy" data-src="@img/about/testimony/testimony02.jpg" alt="Image food">
+								<a href="" class="slide-barpage-slider__image-ibg">
+									<img class="swiper-lazy" data-src="@img/mainbar/barheader/nightbar.jpg" alt="Image food">
 								</a>
 							</div>
-							<div class="body-main-slider__slide slide-main-slider">
-								<div class="slide-main-slider__content">
-									<div class="slide-main-slider__header block-header block-header_big block-header_left">
+							<div class="body-barpage-slider__slide slide-barpage-slider">
+								<div class="slide-barpage-slider__content">
+									<div
+										class="slide-barpage-slider__header block-header block-header_big block-header_barpage block-header_left">
 										<h2 class="block-header__title">Et, penatibus</h2>
 									</div>
 								</div>
-								<a href=" " class="slide-main-slider__image-ibg">
-									<img class="swiper-lazy" data-src="@img/about/testimony/testimony03.jpg" alt="Image food">
+								<a href=" " class="slide-barpage-slider__image-ibg">
+									<img class="swiper-lazy" data-src="@img/mainbar/barheader/luxurybar.jpg" alt="Image food">
 								</a>
 							</div>
 						</div>
-						<div class="body-main-slider__controll"></div>
 					</div>
-					<nav class="main-slider__menu menu-main-slider">
-						<a href="index.html" class="menu-main-slider__link menu-main-slider__link_current">#Gericht</a>
-						<a href="bar.html" class="menu-main-slider__link">#Bar</a>
+					<div class="body-barpage-slider__controll"></div>
+					<nav class="barpage-slider__menu menu-barpage-slider">
+						<a href="index.html" class="menu-barpage-slider__link">#Gericht</a>
+						<a href="bar.html" class="menu-barpage-slider__link menu-barpage-slider__link_current">#Bar</a>
 					</nav>
-					<button data-goto=".about-section" data-da=".body-main-slider,1445,last" type="button"
-						class="main-slider__scroll scroll">Scroll</button>
+					<button data-goto=".book" data-da=".body-barpage-slider,1445,last" type="button"
+						class="barpage-slider__scroll scroll">Scroll</button>
+				</div>
+				<div class="barpage__images images__barpage">
+					<div class="images-barpage__item">
+						<div class="images-barpage__background"></div>
+					</div>
 				</div>
 			</section>
 			<div class="mainpage__body">
@@ -98,6 +106,57 @@
 								</div>
 								<button type="submit" class="book__button button">Book Now</button>
 							</form>
+						</div>
+					</div>
+				</section>
+				<section data-bg class="entertainment">
+					<div class="entertainment__container">
+						<div class="entertainment__items items-entertainment">
+							<div class="item-entertainment__image-big-ibg">
+								<img src="@img/mainbar/entertainment/entertainmentBar.jpg" alt="">
+							</div>
+							<div class="item-entertainment">
+								<div class="item-entertainment__image-ibg">
+									<img src="@img/mainbar/entertainment/entertainmentBar02.jpg" alt="">
+								</div>
+								<div class="item-entertainment__header block-header block-header_left">
+									<div class="block-header__sub-title">About Us</div>
+									<h2 class="block-header__title block-header__title_left">Food, Drinks, entertainment in one
+									</h2>
+									<p class="block-header__text">Adipiscing tempus ullamcorper lobortis odio tellus arcu
+										volutpat. Risus placerat morbi volutpat habitasse interdum mi
+										aliquam In sed odio nec aliquet.</p>
+									<a href="#" class="item-entertainment__button button">Know More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="poison">
+					<div class="poison__container">
+						<div class="poison__header block-header">
+							<div class="block-header__sub-title">Wide Range to choose from</div>
+							<h2 class="block-header__title">What’s Your Poison?</h2>
+						</div>
+						<div class="poison__items items-points">
+							<div class="item-points__image-ibg item-points__image-beer">
+								<a href="" class="poison__link"><img src="@img/mainbar/poison/poison01.jpg" alt=""></a>
+							</div>
+							<div class="item-points__image-ibg item-points__image-wine">
+								<a href="" class="poison__link"><img src="@img/mainbar/poison/poison02.jpg" alt=""></a>
+							</div>
+							<div class="item-points__image-ibg item-points__image-cocktail">
+								<a href="" class="poison__link"><img src="@img/mainbar/poison/poison03.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-bg2 class="hours">
+					<div class="hours__container">
+						<div class="hours__header block-header">
+							<h2 class="block-header__title block-header__title-big">Happy Hours</h2>
+							<div class="block-header__sub-title block-header__sub-title-hours">Monday - Friday (4:00 Pm -
+								7:00pm)</div>
 						</div>
 					</div>
 				</section>
