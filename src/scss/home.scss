@@ -1,8 +1,4 @@
 //====================================================================================================
-.svetailo:hover {
-	transform: scale(1.1);
-	color: $mainGold;
-}
 .main-menu .menu__link_main-active {
 	color: $mainGold;
 }
@@ -1325,6 +1321,13 @@
 		}
 	}
 }
+.welcome__scroll {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%, 0px);
+	z-index: 10;
+}
 
 //*========================================================================================================================================================
 
@@ -1836,7 +1839,6 @@
 		position: relative;
 		margin: -50px auto 0 auto;
 		z-index: 100;
-		animation: scroll-scale 1.5s ease infinite alternate;
 		@media (max-width: $tablet) {
 			@include adaptiveValue("font-size", 16, 10);
 			&::before {
@@ -1846,17 +1848,6 @@
 				height: 60px;
 				background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
 			}
-		}
-		@media (max-width: $mobile) {
-			display: none;
-		}
-	}
-	@keyframes scroll-scale {
-		0% {
-			transform: scale(1);
-		}
-		100% {
-			transform: scale(1.1);
 		}
 	}
 }
@@ -2335,5 +2326,171 @@
 		&::after {
 			display: none;
 		}
+	}
+}
+
+//* find========================================================================================================================================================
+
+.find {
+	// .find__container
+	@include adaptiveValue("padding-top", 150, 40);
+	@include adaptiveValue("padding-bottom", 150, 40);
+	&__container {
+		display: grid;
+		row-gap: 30px;
+		align-items: center;
+		@media (min-width: $mobile) {
+			column-gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .find__column
+
+	&__column {
+		&:first-child {
+			text-align: center;
+		}
+		&:last-child {
+			align-self: center;
+		}
+	}
+
+	// .find__content
+
+	&__content {
+		display: grid;
+		text-align: left;
+		@media (max-width: $mobile) {
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	// .find__header
+
+	&__header {
+	}
+
+	// .find__text
+
+	&__text {
+		font-style: italic;
+		@include adaptiveValue("padding-top", 64, 40);
+	}
+
+	// .find__info
+
+	&__info {
+		@include adaptiveValue("padding-top", 32, 30);
+		@include adaptiveValue("padding-bottom", 64, 30);
+	}
+
+	// .find__button
+
+	&__button {
+		justify-self: start;
+		@media (max-width: $mobile) {
+			justify-self: center;
+		}
+	}
+
+	// .find__image
+
+	.find__image-ibg {
+		position: relative;
+		align-self: center;
+		padding-bottom: percent(719, 666);
+		@media (min-width: $tablet) {
+			margin-right: percent(25, 650);
+			max-height: 736px;
+			height: 100%;
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $mainGold;
+			transition: transform 0.3s ease 0s;
+			width: percent(435, 619);
+			height: percent(435, 688);
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+		&::before {
+			top: 0;
+			right: 0;
+			transform: translate(25px, -25px);
+		}
+		&::after {
+			bottom: 0;
+			left: 0;
+			transform: translate(-25px, 25px);
+		}
+		img {
+			transition: transform 0.3s ease 0s;
+			z-index: 2;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transform: translate(30px, -30px);
+				}
+				&::after {
+					transform: translate(-30px, 30px);
+				}
+				img {
+					transform: scale(1.02);
+				}
+			}
+		}
+	}
+}
+.block-header {
+	// .block-header_left
+	text-align: left;
+	&_left {
+		justify-content: start;
+		@media (max-width: $mobile) {
+			justify-self: center;
+			text-align: center;
+		}
+	}
+
+	// .block-header__sub-title
+
+	&__sub-title {
+	}
+
+	// .block-header__title
+
+	&__title {
+	}
+}
+// ._icon-quote
+
+.info-find {
+	// .info-find__title
+
+	&__title {
+		color: $mainGold;
+		@extend %cuf;
+		font-size: rem(23);
+		font-weight: 700;
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		text-transform: capitalize;
+	}
+
+	// .info-find__text
+
+	&__text {
+		@extend %cuf;
+		line-height: 175%;
+		color: #ffffff;
 	}
 }

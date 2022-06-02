@@ -174,7 +174,7 @@ window.onload = function () {
 			images.style.cssText = `transform: translate(${positionX / forImages}%,${positionY / forImages}%);`;
 			requestAnimationFrame(setMouseParallaxStyle);
 		}
-		// setMouseParallaxStyle();
+		setMouseParallaxStyle();
 
 		parallax.addEventListener("mousemove", function (e) {
 			// Получение ширины и высоты блока
