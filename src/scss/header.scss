@@ -23,22 +23,17 @@
 		transition: all 1s ease 0s;
 		// transform: translate(0px, 0%);
 	}
-	&__container {
+&__container {
+		// .header__container_wide
 		&_wide {
 		}
-		position: relative;
 		align-items: center;
-		min-height: 115px;
+		position: relative;
 		display: flex;
 		gap: 10px;
-		@media (max-width: $tablet) {
-			min-height: 90px;
-		}
+		@include adaptiveValue("min-height", 80, 30);
 		@media (max-width: $mobile) {
-			min-height: 50px;
-		}
-		@media (max-width: $mobile) {
-			gap: 30px;
+			gap: 25px;
 		}
 		._header-scroll & {
 			@include adaptiveValue("min-height", 80, 50);

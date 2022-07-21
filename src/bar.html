@@ -71,7 +71,7 @@
 								<div class="block-header__sub-title">Reservations</div>
 								<h2 class="block-header__title">Book A Table</h2>
 							</div>
-							<form data-dev data-popup-message="#formMessage" action="#" class="book__form form-book">
+							<form data-dev data-popup-message="#popupmail" action="#" class="book__form form-book">
 								<div class="form-book__lines">
 									<div class="form-book__line">
 										<select name="form[]" class="form">
@@ -110,7 +110,7 @@
 					</div>
 				</section>
 				<section data-bg class="entertainment">
-					<div class="entertainment__container">
+					<div data-decor class="entertainment__container">
 						<div class="entertainment__items items-entertainment">
 							<div class="item-entertainment__image-big-ibg">
 								<img src="@img/mainbar/entertainment/entertainmentBar.jpg" alt="">
@@ -161,7 +161,7 @@
 					</div>
 				</section>
 				<section class="special">
-					<div class="special__container">
+					<div data-decor class="special__container">
 						<div class="special__header block-header">
 							<div class="block-header__sub-title">Menu that fits you palatte</div>
 							<h2 class="block-header__title">Today’s Special</h2>
@@ -255,7 +255,7 @@
 					</div>
 				</section>
 				<section data-bg class="find">
-					<div class="find__container">
+					<div data-decor class="find__container">
 						<div class="find__column">
 							<div class="find__content">
 								<div class="find__header block-header block-header_left">
@@ -274,20 +274,20 @@
 						</div>
 						<div class="find__column">
 							<div class="find__image-ibg">
-								<a href="" class="find__image-link"><img src="@img/about/history/history-trattoria.jpg" alt="find"></a>
+								<a href="" class="find__image-link"><img src="@img/mainbar/finder/findCocktail.jpg" alt="find"></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<section class="newsletter">
-					<div data-decor="" class="newsletter__container">
+					<div data-decor class="newsletter__container_bar">
 						<div class="newsletter__wrapp">
 							<div class="block__newsletter block-header">
 								<div class="block-header__sub-title">Newsletter</div>
 								<h2 class="block-header__title">Subscribe to Our Newsletter</h2>
 								<p class="block-header__text">And never miss latest Updates!</p>
 							</div>
-							<form action="" class="newsletter__form">
+							<form data-dev data-popup-message="#popupmail" action="" class="newsletter__form">
 								<input type="email" class="newsletter__input" placeholder="Email Address" name="" id="">
 								<button type="submit" class="newsletter__button button">Subscribe</button>
 							</form>
@@ -303,6 +303,8 @@
 			class="scroll-top scroll _anim-items">Top</button>
 	</div>
 	@@include('html/_popup.htm',{})
+	@@include('html/_popupreg.htm',{})
+	@@include('html/_popupmail.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

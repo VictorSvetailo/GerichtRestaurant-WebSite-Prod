@@ -150,7 +150,9 @@ window.onload = function () {
 
 	if (parallax) {
 		const content = document.querySelector('.welcome__container, .barpage__images');
-		const images = document.querySelector('.images-welcome__background, .images-barpage__background');
+		const images = document.querySelector(
+			'.images-welcome__background, .images-barpage__background, .images-contact__background, .images-blogs__background'
+		)
 
 		// Коэффициенты
 		const forImages = 40;
@@ -204,12 +206,307 @@ window.onload = function () {
 			threshold: thresholdSets
 		});
 
-		observer.observe(document.querySelector('.history, .mainpage__body'));
+		observer.observe(
+			document.querySelector('.history, .mainpage__body, .contact-maps')
+		)
 
 		function setParallaxItemsStyle(scrollTopProcent) {
 			content.style.cssText = `transform: translate(0%,${scrollTopProcent / 0}%);`;
 			images.parentElement.style.cssText = `transform: translate(0%,${scrollTopProcent / 5}%);`;
 		}
 	}
-};
+}
 
+// form========================================================================================================================================================
+
+document.addEventListener('DOMContentLoaded', function () {
+	const form = document.getElementById('form');
+	form.addEventListener('submit', formSend);
+
+	async function formSend(e) {
+		e.preventDefault();
+
+		let error = formValidate(form);
+
+		// вытягиваем данные из полей формы 
+		let formData = new FormData(form);
+		// formData.append(files[0]);
+
+		if (error === 0) {
+			form.classList.add('_sending');
+			let response = await fetch('../../sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.ok) {
+				let result = await response.json();
+				alert(result.message);
+				formPreview.innerHTML = '';
+				form.reset();
+				form.classList.remove('_sending');
+			} else {
+				alert("Ошибка");
+				form.classList.remove('_sending');
+			}
+		} else {
+			alert('Заполните обязательные поля');
+		}
+
+
+	}
+
+	function formValidate(form) {
+		let error = 0;
+		let formReq = document.querySelectorAll('._req');
+
+		for (let index = 0; index < formReq.length; index++) {
+			const input = formReq[index];
+			formRemoveError(input);
+
+			if (input.classList.contains('_email')) {
+				if (emailTest(input)) {
+					formAddError(input);
+					error++;
+				}
+			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+				formAddError(input);
+				error++;
+			} else {
+				if (input.value === '') {
+					formAddError(input);
+					error++;
+				}
+			}
+		}
+		return error;
+	}
+	function formAddError(input) {
+		input.parentElement.classList.add('_error');
+		input.classList.add('_error');
+	}
+
+	function formRemoveError(input) {
+		input.parentElement.classList.remove('_error');
+		input.classList.remove('_error');
+	}
+
+	function emailTest(input) {
+		return !/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(input.value);
+	}
+});
+
+
+//* Maps========================================================================================================================================================
+		// Initialize and add the map
+		function initMap() {
+			// The location of Uluru
+			const uluru = { lat: 51.499259, lng: -0.1265852 };
+			// The map, centered at Uluru
+			const map = new google.maps.Map(document.getElementById("contact__map"), {
+				zoom: 11,
+				center: uluru,
+				styles: [
+					{
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#212121"
+							}
+						]
+					},
+					{
+						"elementType": "labels.icon",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#757575"
+							}
+						]
+					},
+					{
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"color": "#212121"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#757575"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.country",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#9e9e9e"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.land_parcel",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.locality",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#bdbdbd"
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#757575"
+							}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#181818"
+							}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#616161"
+							}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"color": "#1b1b1b"
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#2c2c2c"
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#8a8a8a"
+							}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#373737"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#3c3c3c"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway.controlled_access",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#4e4e4e"
+							}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#616161"
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#757575"
+							}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#3d3d3d"
+							}
+						]
+					}
+				],
+			});
+			// The marker, positioned at Uluru
+			marker = new google.maps.Marker({
+				map,
+				draggable: true,
+				title: "Drag me!",
+				animation: google.maps.Animation.DROP,
+				position: { lat: 51.499259, lng: -0.1265852 },
+			});
+			marker.addListener("click", toggleBounce);
+			function toggleBounce() {
+				if (marker.getAnimation() !== null) {
+					marker.setAnimation(null);
+				} else {
+					marker.setAnimation(google.maps.Animation.BOUNCE);
+				}
+			}
+		}
+		window.initMap = initMap;

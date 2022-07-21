@@ -3,16 +3,100 @@
 @@include('html/_head.htm',{
 "title":"Главная"
 })
+
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
-		<main class="main">
-			@@include('html/_indevelopment.htm',{})
+		<div class="contact-menu">
+			@@include('html/_header.htm',{})
+		</div>
+		<main class="main-contact">
+			<div class="main-contact__body">
+				<section data-fullscreen class="welcome">
+					<div class="welcome__body">
+						<div class="welcome__container">
+							<div class="book__welcome block-header block-header_big">
+								<h2 class="block-header__title">Contact Us</h2>
+								<nav class="welcome__body">
+									<ul class="welcome__list">
+										<li class="welcome__item"><a href="index.html" class="welcome__link">Home</a></li>
+										<li class="welcome__item"><img src="@img/about/welcome/arrow.svg" alt=""></li>
+										<li class="welcome__item"><a href="contact.html" class="welcome__link welcome__link_current">Contact
+												Us</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<button data-goto=".contact-maps" type="button" class="welcome__scroll scroll">Scroll</button>
+					</div>
+					<div class="welcome__images images__welcome">
+						<div class="images-welcome__item">
+							<div class="images-contact__background"></div>
+						</div>
+					</div>
+				</section>
+				<div class="contact-maps">
+					<div data-decor class="contact-maps__container">
+						<div class="" id="contact__map">
+						</div>
+					</div>
+				</div>
+				<section data-bg class="awards">
+					<div class="awards__container">
+						<div class="awards__form">
+							<form action="#" id="form" class="form__body">
+								<div class="form__item">
+									<input autocomplete="new-password" autocomplete="h87h58g7h8hd" name="name" data-error="Ошибка"
+										data-value="" class="form__input _req" placeholder="Full Name">
+								</div>
+								<div class="form__item">
+									<input autocomplete="new-email" autocomplete="h87h58g7h8hd" name="email" data-error="Ошибка"
+										data-value="" class="form__input _req _email" placeholder="Email Address">
+								</div>
+								<div class="form__item">
+									<textarea name="message" class="form__input" placeholder="Message"></textarea>
+								</div>
+								<div class="form__item">
+									<button type="submit" class="form__button button">Subscribe</button>
+								</div>
+							</form>
+						</div>
+						<div class="awards__block awards__block_none">
+							<div class="awards__image">
+								<img src="@img/mainpage/awards/laurelsFood.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="newsletter">
+					<div data-decor="" class="newsletter__container">
+						<div class="newsletter__wrapp">
+							<div class="block__newsletter block-header">
+								<div class="block-header__sub-title">Newsletter</div>
+								<h2 class="block-header__title">Subscribe to Our Newsletter</h2>
+								<p class="block-header__text">And never miss latest Updates!</p>
+							</div>
+							<form data-dev data-popup-message="#popupmail" action="" class="newsletter__form">
+								<input type="email" class="newsletter__input" placeholder="Email Address" name="" id="">
+								<button type="submit" class="newsletter__button button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
-		@@include('html/_footer.htm',{})
+		<div class="overlap__footer">
+			@@include('html/_footer.htm',{})
+		</div>
+		<button data-goto=".wrapper" data-da=".wrapper,0,last" type="button"
+			class="scroll-top scroll _anim-items">Top</button>
 	</div>
 	@@include('html/_popup.htm',{})
+	@@include('html/_popupreg.htm',{})
+	@@include('html/_popupmail.htm',{})
 	@@include('html/_js.htm',{})
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTbACP56fYkZPKprSkH5ktQiyE5blpl58&callback=initMap"></script>
 </body>
 
 </html>

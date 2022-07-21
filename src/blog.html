@@ -3,15 +3,225 @@
 @@include('html/_head.htm',{
 "title":"Главная"
 })
+
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
-		<main class="main">
-			@@include('html/_indevelopment.htm',{})
+		<div class="blogs-menu">
+			@@include('html/_header.htm',{})
+		</div>
+		<main class="main-blogs">
+			<div class="main-blogs__body">
+				<section data-fullscreen class="welcome">
+					<div class="welcome__body">
+						<div class="welcome__container">
+							<div class="book__welcome block-header block-header_big">
+								<h2 class="block-header__title">Our Blogs</h2>
+								<nav class="welcome__body">
+									<ul class="welcome__list">
+										<li class="welcome__item"><a href="index.html" class="welcome__link">Home</a></li>
+										<li class="welcome__item"><img src="@img/about/welcome/arrow.svg" alt=""></li>
+										<li class="welcome__item"><a href="blogs.html" class="welcome__link welcome__link_current">Our
+												Blogs- With sidebar</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<button data-goto=".dishes" type="button" class="welcome__scroll scroll">Scroll</button>
+					</div>
+					<div class="welcome__images images__welcome">
+						<div class="images-welcome__item">
+							<div class="images-blogs__background"></div>
+						</div>
+					</div>
+				</section>
+				<section class="dishes">
+					<div class="dishes__container">
+						<div class="dishes-body">
+							<div class="dishes-body__cards">
+								<div class="dishes-body__item">
+									<div class="posts-visual">
+										<div class="posts-visual__items">
+											<div class="posts-visual__image-ibg">
+												<img src="@img/posts-visual/meatFood.jpg" alt="">
+											</div>
+										</div>
+										<div class="posts-visual__items">
+											<div class="posts-visual__update">
+												<p class="posts-visual__date">23 May 2021</p>
+												<p class="posts-visual__name">- John Micheal</p>
+											</div>
+											<h2 class="posts-visual__title">Summer cocktails and mocktails</h2>
+											<p class="posts-visual__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+												mattis ipsum turpis elit....</p>
+											<a href="" class="posts-visual__more">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="dishes-body__item">
+									<div class="posts-visual">
+										<div class="posts-visual__items">
+											<div class="posts-visual__image-ibg">
+												<img src="@img/posts-visual/cocktailFood.jpg" alt="">
+											</div>
+										</div>
+										<div class="posts-visual__items">
+											<div class="posts-visual__update">
+												<p class="posts-visual__date">23 May 2021</p>
+												<p class="posts-visual__name">- John Micheal</p>
+											</div>
+											<h2 class="posts-visual__title">Summer cocktails and mocktails</h2>
+											<p class="posts-visual__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+												mattis ipsum turpis elit....</p>
+											<a href="" class="posts-visual__more">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="dishes-body__item">
+									<div class="posts-visual">
+										<div class="posts-visual__items">
+											<div class="posts-visual__image-ibg">
+												<img src="@img/posts-visual/dishFood.jpg" alt="">
+											</div>
+										</div>
+										<div class="posts-visual__items">
+											<div class="posts-visual__update">
+												<p class="posts-visual__date">23 May 2021</p>
+												<p class="posts-visual__name">- John Micheal</p>
+											</div>
+											<h2 class="posts-visual__title">Summer cocktails and mocktails</h2>
+											<p class="posts-visual__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+												mattis ipsum turpis elit....</p>
+											<a href="" class="posts-visual__more">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="dishes-body__item">
+									<div class="posts-visual">
+										<div class="posts-visual__items">
+											<div class="posts-visual__image-ibg">
+												<img src="@img/posts-visual/chefFood.jpg" alt="">
+											</div>
+										</div>
+										<div class="posts-visual__items">
+											<div class="posts-visual__update">
+												<p class="posts-visual__date">23 May 2021</p>
+												<p class="posts-visual__name">- John Micheal</p>
+											</div>
+											<h2 class="posts-visual__title">Summer cocktails and mocktails</h2>
+											<p class="posts-visual__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+												mattis ipsum turpis elit....</p>
+											<a href="" class="posts-visual__more">Read More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="dishes-body__menu menu-disher">
+								<div class="menu-disher">
+									<div class="menu-disher__search search-menu">
+										<h4 class="search-menu__title">Search Page</h4>
+										<div class="search-menu__line">Example<span></span></div>
+									</div>
+									<div class="menu-disher__categories categories-menu">
+										<h4 class="categories-menu__title">All Categories</h4>
+										<div class="categories-menu__items">
+											<div class="categories-menu__item">
+												<h5>Photography</h5> <span></span>
+												<p>(1)</p>
+											</div>
+											<div class="categories-menu__item">
+												<h5>Baking</h5><span></span>
+												<p>(2)</p>
+											</div>
+											<div class="categories-menu__item">
+												<h5>Cooking Tips</h5><span></span>
+												<p>(6)</p>
+											</div>
+										</div>
+									</div>
+									<div class="menu-disher__posts posts-menu">
+										<h4 class="posts-menu__title">Our Latest Posts</h4>
+										<div class="posts-visual">
+											<div class="posts-visual__items">
+												<div class="posts-visual__image-ibg">
+													<img src="@img/posts-visual/cocktailFood.jpg" alt="">
+												</div>
+											</div>
+											<div class="posts-visual__items">
+												<div class="posts-visual__update">
+													<p class="posts-visual__date">23 May 2021</p>
+													<p class="posts-visual__name">- John Micheal</p>
+												</div>
+												<h2 class="posts-visual__title">Summer cocktails and mocktails</h2>
+												<p class="posts-visual__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+													mattis ipsum turpis elit....</p>
+												<a href="" class="posts-visual__more">Read More</a>
+											</div>
+										</div>
+									</div>
+									<div class="menu-disher__tags tags-menu">
+										<h4 class="tags-menu__title">Related Tags</h4>
+										<div class="tags-menu__items">
+											<a href="" class="tags-menu__link">
+												<h5>Grilling</h5>
+											</a>
+											<a href="" class="tags-menu__link">
+												<h5>Cooking</h5>
+											</a>
+											<a href="" class="tags-menu__link">
+												<h5>Baking</h5>
+											</a>
+										</div>
+										<div class="tags-menu__items">
+											<a href="" class="tags-menu__link">
+												<h5>Cuisines</h5>
+											</a>
+											<a href="" class="tags-menu__link">
+												<h5>Chef</h5>
+											</a>
+											<a href="" class="tags-menu__link">
+												<h5>Alcohol Mixing</h5>
+											</a>
+										</div>
+									</div>
+									<div class="menu-disher__share share-menu">
+										<h4 class="share-menu__title">Share</h4>
+										<div class="share-menu__items">
+											<a href="" class="share-menu__social-link"></a>
+											<a href="" class="share-menu__social-link"></a>
+											<a href="" class="share-menu__social-link"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="" class="dishes-body__button button">View More</a>
+						</div>
+					</div>
+				</section>
+				<section class="newsletter">
+					<div data-decor="" class="newsletter__container">
+						<div class="newsletter__wrapp">
+							<div class="block__newsletter block-header">
+								<div class="block-header__sub-title">Newsletter</div>
+								<h2 class="block-header__title">Subscribe to Our Newsletter</h2>
+								<p class="block-header__text">And never miss latest Updates!</p>
+							</div>
+							<form data-dev data-popup-message="#popupmail" action="" class="newsletter__form">
+								<input type="email" class="newsletter__input" placeholder="Email Address" name="" id="">
+								<button type="submit" class="newsletter__button button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
-		@@include('html/_footer.htm',{})
+		<div class="overlap__footer">
+			@@include('html/_footer.htm',{})
+		</div>
 	</div>
 	@@include('html/_popup.htm',{})
+	@@include('html/_popupreg.htm',{})
+	@@include('html/_popupmail.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

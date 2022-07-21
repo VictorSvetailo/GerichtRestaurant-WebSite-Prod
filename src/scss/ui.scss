@@ -47,6 +47,15 @@
 	background: url("@img/mainbar/hours/hoursBg01.jpg") center / cover no-repeat;
 }
 
+.background-general {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("@img/mainBg.jpg") center / cover no-repeat;
+}
+
 // шапка блока
 .block-header {
 	@extend %cuf;
@@ -81,6 +90,9 @@
 	&_big {
 		.block-header__title {
 			@include adaptiveValue("font-size", 90, 40);
+			@media (max-width: em(1445)) {
+				@include adaptiveValue("font-size", 70, 40);
+			}
 		}
 	}
 	&_barpage {
@@ -94,6 +106,10 @@
 			letter-spacing: 0.05em;
 			text-transform: capitalize;
 			color: #ffffff;
+			text-align: center;
+			@media (max-width: em(1445)) {
+				@include adaptiveValue("font-size", 120, 40);
+			}
 		}
 	}
 
@@ -109,20 +125,21 @@
 .scroll {
 	@extend %cuf;
 	color: $mainGold;
+	font-size: 13px;
 	font-weight: 700;
 	line-height: 175%;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	display: grid;
 	justify-items: center;
-	gap: 24px;
-	animation: scroll-scale 1.5s ease infinite alternate;
+	gap: 20px;
 	&::before {
 		content: "";
 		background: rgb(220, 202, 135);
 		width: 1px;
-		height: 60px;
+		height: 50px;
 		background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
+		animation: scroll-scale 1s ease infinite alternate;
 	}
 	@media (max-width: $mobile) {
 		display: none;
@@ -132,7 +149,7 @@
 			transform: scale(1);
 		}
 		100% {
-			transform: scale(1.1);
+			transform: scale(1.3);
 		}
 	}
 }
@@ -155,13 +172,13 @@
 	text-transform: uppercase;
 	display: grid;
 	justify-items: center;
-	gap: 24px;
+	gap: 20px;
 	&::before {
 		content: "";
 		transition: all 0.8s ease 0s;
 		background: rgb(220, 202, 135);
 		width: 1px;
-		height: 50px;
+		height: 40px;
 		background: linear-gradient(0deg, rgba(220, 202, 135, 0.24) 0%, rgba(220, 202, 135, 1) 100%);
 	}
 }
@@ -187,4 +204,111 @@
 
 [class*="__text"] {
 	line-height: 175%;
+}
+
+.form__input:focus {
+	box-shadow: 1px 1px 10px $mainGold;
+}
+
+input,
+button,
+textarea {
+	outline: none;
+}
+
+input:focus {
+	box-shadow: 1px 1px 10px $mainGold;
+}
+textarea:focus {
+	box-shadow: 1px 1px 10px $mainGold;
+}
+
+//* posts-visual component========================================================================================================================================================
+
+.posts-menu {
+	max-width: 375px;
+	padding: 32px;
+}
+.posts-menu__title {
+	@extend %cuf;
+	@include adaptiveValue("padding-bottom", 32, 20);
+	font-size: 32px;
+	line-height: 130%;
+	letter-spacing: 0.04em;
+	text-transform: capitalize;
+	color: $mainGold;
+}
+//========================================================================================================================================================
+
+.posts-visual {
+	display: flex;
+	flex-direction: column;
+	// .posts-visual__items
+	gap: 32px;
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	// .posts-visual__image-ibg
+
+	&__image-ibg {
+		padding-bottom: percent(619, 620);
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .posts-visual__update
+
+	&__update {
+		display: flex;
+		justify-content: space-between;
+		line-height: 175%;
+		letter-spacing: 0.04em;
+		color: #aaaaaa;
+		font-size: 15px;
+	}
+
+	// .posts-visual__date
+
+	&__date {
+	}
+
+	// .posts-visual__name
+
+	&__name {
+	}
+
+	// .posts-visual__title
+
+	&__title {
+		@include adaptiveValue("font-size", 32, 25);
+		@extend %cuf;
+		font-size: 32px;
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		text-transform: capitalize;
+		color: $mainGold;
+	}
+
+	// .posts-visual__text
+
+	&__text {
+		line-height: 175%;
+		letter-spacing: 0.04em;
+		color: #aaaaaa;
+	}
+
+	// .posts-visual__more
+
+	&__more {
+		@extend %cuf;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 175%;
+		letter-spacing: 0.04em;
+		color: #dcca87;
+	}
 }
